@@ -23,7 +23,18 @@ public class ModFoodProperties {
             .build();
 
     public static final FoodProperties EMERALDAPPLE = new FoodProperties.Builder().nutrition(10).saturationModifier(1.9F)
-            .effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 1), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 1200, 0), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.LUCK, 1200, 1), 1.0F)
+            .alwaysEdible()
+            .build();
+
+    public static final FoodProperties COPPERAPPLE = new FoodProperties.Builder().nutrition(10).saturationModifier(1.9F)
+            .effect(new MobEffectInstance(MobEffects.DIG_SPEED, 1200, 1), 1.0F)
+            .alwaysEdible()
+            .build();
+
+    public static final FoodProperties IRONAPPLE = new FoodProperties.Builder().nutrition(10).saturationModifier(1.9F)
+            .effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 1200, 0), 1.0F)
             .alwaysEdible()
             .build();
 }

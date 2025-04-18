@@ -24,6 +24,12 @@ public class ModItems {
     public static final RegistryObject<Item> EMERALDAPPLE = ITEMS.register("emerald_apple",
             () -> new Item(new Item.Properties().food(ModFoodProperties.EMERALDAPPLE)));
 
+    public static final RegistryObject<Item> COPPERAPPLE = ITEMS.register("copper_apple",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.COPPERAPPLE)));
+
+    public static final RegistryObject<Item> IRONAPPLE = ITEMS.register("iron_apple",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.IRONAPPLE)));
+
     public static final RegistryObject<Item> WOOD_WRAPPER = ITEMS.register("wood_wrapper",
             () -> new WoodWrapperItem(new Item.Properties().durability(164)));
 

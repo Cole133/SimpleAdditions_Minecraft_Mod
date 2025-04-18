@@ -22,6 +22,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.WINDAPPLE.get());
                         output.accept(ModItems.MYTHICALAPPLE.get());
                         output.accept(ModItems.EMERALDAPPLE.get());
+                        output.accept(ModItems.COPPERAPPLE.get());
+                        output.accept(ModItems.IRONAPPLE.get());
 
                         output.accept(ModItems.WOOD_WRAPPER.get());
 
