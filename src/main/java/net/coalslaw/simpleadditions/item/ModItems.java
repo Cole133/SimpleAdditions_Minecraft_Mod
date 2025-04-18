@@ -15,20 +15,23 @@ public class ModItems {
     public static final RegistryObject<Item> PAINITE = ITEMS.register("painite",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> MYTHICALAPPLE = ITEMS.register("mythical_apple",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.MYTHICALAPPLE)));
-
-    public static final RegistryObject<Item> WINDAPPLE = ITEMS.register("wind_apple",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.WINDAPPLE)));
-
-    public static final RegistryObject<Item> EMERALDAPPLE = ITEMS.register("emerald_apple",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.EMERALDAPPLE)));
-
-    public static final RegistryObject<Item> COPPERAPPLE = ITEMS.register("copper_apple",
+    /*
+        All Custom Apples
+     */
+    public static final RegistryObject<Item> COPPER_APPLE = ITEMS.register("copper_apple",
             () -> new Item(new Item.Properties().food(ModFoodProperties.COPPERAPPLE)));
 
-    public static final RegistryObject<Item> IRONAPPLE = ITEMS.register("iron_apple",
+    public static final RegistryObject<Item> IRON_APPLE = ITEMS.register("iron_apple",
             () -> new Item(new Item.Properties().food(ModFoodProperties.IRONAPPLE)));
+
+    public static final RegistryObject<Item> EMERALD_APPLE = ITEMS.register("emerald_apple",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.EMERALDAPPLE)));
+
+    public static final RegistryObject<Item> WIND_APPLE = ITEMS.register("wind_apple",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.WINDAPPLE)));
+
+    public static final RegistryObject<Item> MYTHICAL_APPLE = ITEMS.register("mythical_apple",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.MYTHICALAPPLE)));
 
     public static final RegistryObject<Item> WOOD_WRAPPER = ITEMS.register("wood_wrapper",
             () -> new WoodWrapperItem(new Item.Properties().durability(164)));

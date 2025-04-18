@@ -19,11 +19,12 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.simpleadditions.simpleadditions_items"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.PAINITE.get());
-                        output.accept(ModItems.WINDAPPLE.get());
-                        output.accept(ModItems.MYTHICALAPPLE.get());
-                        output.accept(ModItems.EMERALDAPPLE.get());
-                        output.accept(ModItems.COPPERAPPLE.get());
-                        output.accept(ModItems.IRONAPPLE.get());
+
+                        output.accept(ModItems.COPPER_APPLE.get());
+                        output.accept(ModItems.IRON_APPLE.get());
+                        output.accept(ModItems.EMERALD_APPLE.get());
+                        output.accept(ModItems.WIND_APPLE.get());
+                        output.accept(ModItems.MYTHICAL_APPLE.get());
 
                         output.accept(ModItems.WOOD_WRAPPER.get());
 
