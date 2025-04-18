@@ -1,6 +1,7 @@
 package net.coalslaw.simpleadditions.item;
 
 import net.coalslaw.simpleadditions.SimpleAdditions;
+import net.coalslaw.simpleadditions.item.custom.WoodWrapperItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -19,6 +20,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> WINDAPPLE = ITEMS.register("wind_apple",
             () -> new Item(new Item.Properties().food(ModFoodProperties.WINDAPPLE)));
+
+    public static final RegistryObject<Item> WOOD_WRAPPER = ITEMS.register("wood_wrapper",
+            () -> new WoodWrapperItem(new Item.Properties().durability(164)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

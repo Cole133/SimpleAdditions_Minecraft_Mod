@@ -22,6 +22,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.WINDAPPLE.get());
                         output.accept(ModItems.MYTHICALAPPLE.get());
 
+                        output.accept(ModItems.WOOD_WRAPPER.get());
+
                         output.accept(ModBlocks.PAINITE_ORE.get());
                         output.accept(ModBlocks.PAINITE_BLOCK.get());
                         output.accept(ModBlocks.STONE_TILE.get());
