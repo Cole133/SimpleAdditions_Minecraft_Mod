@@ -1,0 +1,14 @@
+{
+  "item.simpleadditions.painite" : "Painite",
+  "item.simpleadditions.mythical_apple" : "Mythical Apple",
+  "item.simpleadditions.wind_apple" : "Wind Apple",
+
+  "block.simpleadditions.painite_block": "Block of Painite",
+  "block.simpleadditions.painite_ore": "Painite Ore",
+  "block.simpleadditions.stone_tile": "Stone Tile",
+
+  "effect.simpleadditions.flight": "Flight",
+  "effect.simpleadditions.instabreak": "Insta Break",
+
+  "creativetab.simpleadditions.simpleadditions_items": "Simple Additions"
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "simpleadditions:painite_block",
+    "simpleadditions:painite_ore",
+    "simpleadditions:stone_tile"
+  ]
+}
