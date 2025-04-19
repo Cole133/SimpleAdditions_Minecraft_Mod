@@ -26,6 +26,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.WIND_APPLE.get());
                         output.accept(ModItems.MYTHICAL_APPLE.get());
 
+                        output.accept(ModItems.HOUSE_APPLE.get());
                         output.accept(ModItems.WOOD_WRAPPER.get());
 
                         output.accept(ModBlocks.PAINITE_ORE.get());

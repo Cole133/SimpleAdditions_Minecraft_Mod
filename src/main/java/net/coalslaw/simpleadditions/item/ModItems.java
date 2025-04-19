@@ -1,12 +1,14 @@
 package net.coalslaw.simpleadditions.item;
 
 import net.coalslaw.simpleadditions.SimpleAdditions;
+import net.coalslaw.simpleadditions.item.custom.HouseAppleItem;
 import net.coalslaw.simpleadditions.item.custom.WoodWrapperItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.coalslaw.simpleadditions.item.custom.HouseAppleItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -35,6 +37,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> WOOD_WRAPPER = ITEMS.register("wood_wrapper",
             () -> new WoodWrapperItem(new Item.Properties().durability(164)));
+
+    public static final RegistryObject<Item> HOUSE_APPLE  = ITEMS.register("house_apple",
+                 HouseAppleItem::new);
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

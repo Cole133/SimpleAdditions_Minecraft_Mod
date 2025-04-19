@@ -39,4 +39,9 @@ public class ModFoodProperties {
             .alwaysEdible()
             .build();
 
+    public static final FoodProperties HOUSEAPPLE = new FoodProperties.Builder().nutrition(10).saturationModifier(1.9F)
+            .alwaysEdible()
+            .build();
+
+
 }

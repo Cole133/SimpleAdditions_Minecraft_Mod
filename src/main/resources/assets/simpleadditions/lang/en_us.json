@@ -7,6 +7,7 @@
   "item.simpleadditions.copper_apple" : "Copper Apple",
   "item.simpleadditions.iron_apple" : "Iron Apple",
 
+  "item.simpleadditions.house_apple" : "House Apple",
   "item.simpleadditions.wood_wrapper" : "Wood Wrapper",
 
   "block.simpleadditions.painite_block": "Block of Painite",
@@ -16,5 +17,8 @@
   "effect.simpleadditions.flight": "Flight",
   "effect.simpleadditions.instabreak": "Insta Break",
 
-  "creativetab.simpleadditions.simpleadditions_items": "Simple Additions"
+  "creativetab.simpleadditions.simpleadditions_items": "Simple Additions",
+
+  "tooltip.simpleadditions.wood_wrapper.shift_down": "Right-Clicking on stripped logs will bring un-strip them",
+  "tooltip.simpleadditions.wood_wrapper": "Press §eShift§r for more Information!"
 }
