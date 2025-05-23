@@ -12,7 +12,7 @@ public class SlimyEffect extends MobEffect {
     }
 
     @Override
-    public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
+    public boolean applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) { // Return type changed to boolean
         if (pLivingEntity.horizontalCollision) {
             Vec3 motion = pLivingEntity.getDeltaMovement();
             double bounceFactor = 0.7; // Adjust this value for more or less bounce
@@ -32,7 +32,7 @@ public class SlimyEffect extends MobEffect {
              pLivingEntity.setDeltaMovement(pLivingEntity.getDeltaMovement().add(0, 0.42, 0)); // 0.42 is default jump strength
         }
 
-        super.applyEffectTick(pLivingEntity, pAmplifier);
+        return super.applyEffectTick(pLivingEntity, pAmplifier); // Added return statement
     }
 
     @Override
