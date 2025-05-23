@@ -18,6 +18,10 @@ public class ModEffects {
     public static final RegistryObject<MobEffect> INSTABREAK_EFFECT = MOB_EFFECTS.register("instabreak",
             () -> new InstaBreakEffect(MobEffectCategory.NEUTRAL, 0x36ebab));
 
+    public static final RegistryObject<MobEffect> SLIMY_EFFECT = MOB_EFFECTS.register("slimy",
+            () -> new SlimyEffect(MobEffectCategory.NEUTRAL, 0x00FF00)); // Green color for slimy
+
+
     public static void register(IEventBus eventBus){
         MOB_EFFECTS.register(eventBus);
     }

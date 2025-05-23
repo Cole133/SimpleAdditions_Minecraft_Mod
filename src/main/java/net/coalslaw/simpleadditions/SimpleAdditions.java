@@ -19,6 +19,12 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
+// Imports for texture stitching
+import net.minecraft.client.renderer.texture.TextureAtlas;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.client.event.TextureStitchEvent;
+
+
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(SimpleAdditions.MOD_ID)
 public class SimpleAdditions
@@ -85,6 +91,17 @@ public class SimpleAdditions
         public static void onClientSetup(FMLClientSetupEvent event)
         {
 
+        }
+
+        @SubscribeEvent
+        public static void onTextureStitchPre(TextureStitchEvent.Pre event) {
+            if (!event.getAtlas().location().equals(new ResourceLocation("minecraft:textures/atlas/mob_effects.png"))) {
+                return; // Only stitch to the mob effects atlas
+            }
+            // Register custom effect icons
+            event.addSprite(new ResourceLocation(SimpleAdditions.MOD_ID, "mob_effect/slimy"));
+            event.addSprite(new ResourceLocation(SimpleAdditions.MOD_ID, "mob_effect/flight"));
+            event.addSprite(new ResourceLocation(SimpleAdditions.MOD_ID, "mob_effect/instabreak"));
         }
     }
 }
