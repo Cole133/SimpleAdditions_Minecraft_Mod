@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:apple"
+    },
+    "B": {
+      "item": "minecraft:obsidian"
+    },
+    "C": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "CAC",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "simpleadditions:house_apple"
+  }
+}

@@ -1,0 +1,4 @@
+// 1.21.1	2025-04-19T15:43:09.598164	Loot Tables
+cd0550c530b720f576d3f63ba56a2ffec0fea64c data/simpleadditions/loot_table/blocks/painite_block.json
+68f75a4d5fbce240034994b95f10799bb00d869b data/simpleadditions/loot_table/blocks/painite_ore.json
+4ffc162eb76722f74bdea4f9f89faead968f3547 data/simpleadditions/loot_table/blocks/stone_tile.json

@@ -1,0 +1,4 @@
+// 1.21.1	2025-04-19T16:03:32.3354212	Tags for minecraft:block mod id simpleadditions
+57831992ddef126f39dd39f5d714139f41e21db5 data/minecraft/tags/block/mineable/pickaxe.json
+3f40ab5a56f43a074d0a084181445af142bd7ce1 data/minecraft/tags/block/needs_diamond_tool.json
+1cfd2c4c645a7e3478df2908e3d542cd7b2105cf data/minecraft/tags/block/needs_iron_tool.json

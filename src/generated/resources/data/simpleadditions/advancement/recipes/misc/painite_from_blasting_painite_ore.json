@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_painite_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleadditions:painite_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleadditions:painite_from_blasting_painite_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_painite_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleadditions:painite_from_blasting_painite_ore"
+    ]
+  }
+}

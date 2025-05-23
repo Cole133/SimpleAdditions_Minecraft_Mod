@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:stick"
+    },
+    "B": {
+      "item": "minecraft:string"
+    },
+    "C": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "pattern": [
+    "ACA",
+    "CBC",
+    "ACA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "simpleadditions:wood_wrapper"
+  }
+}

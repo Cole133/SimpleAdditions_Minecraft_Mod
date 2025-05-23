@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 5.75,
+  "group": "painite",
+  "ingredient": {
+    "item": "simpleadditions:painite_ore"
+  },
+  "result": {
+    "id": "simpleadditions:painite"
+  }
+}
