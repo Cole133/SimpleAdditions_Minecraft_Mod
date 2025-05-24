@@ -13,30 +13,42 @@ public class SlimyEffect extends MobEffect {
 
     @Override
     public boolean applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
-        // Horizontal bounce logic (can remain similar)
-        if (pLivingEntity.horizontalCollision) {
-            Vec3 motion = pLivingEntity.getDeltaMovement();
-            double bounceFactor = 0.7; 
-            // Dampen horizontal velocity on collision
-            pLivingEntity.setDeltaMovement(motion.x * -bounceFactor, motion.y, motion.z * -bounceFactor);
-        }
+        Vec3 currentMotion = pLivingEntity.getDeltaMovement();
+        double newMotionX = currentMotion.x();
+        double newMotionY = currentMotion.y();
+        double newMotionZ = currentMotion.z();
 
-        // Vertical bounce logic (scaled with fall distance)
-        if (pLivingEntity.verticalCollision && pLivingEntity.onGround()) {
-            if (pLivingEntity.fallDistance > 0.1F) { // Only bounce if fallen a bit
-                Vec3 motion = pLivingEntity.getDeltaMovement();
-                // Calculate bounce strength based on fall distance
-                // Vanilla slime blocks negate fall damage and bounce proportionally.
-                // Max bounce height for slime blocks is achieved at around 3 blocks fall distance.
-                // Let's try to replicate a similar feel, but cap it to prevent extreme bounces.
-                double bounceStrength = Math.min(pLivingEntity.fallDistance * 0.8D, 1.5D); // Cap bounce at 1.5 blocks equiv.
-                
-                pLivingEntity.setDeltaMovement(motion.x, bounceStrength, motion.z);
-                
-                // Reset fall distance after bounce
-                pLivingEntity.fallDistance = 0; 
+        // 1. Horizontal bounce logic
+        if (pLivingEntity.horizontalCollision) {
+            double bounceFactor = 0.7;
+            // Check which axis the collision is on to correctly reverse motion
+            // This is a simplified check; more complex logic might be needed for perfect corner behavior
+            if (Math.abs(pLivingEntity.getDeltaMovement().x()) > 0.05 && pLivingEntity.getX() - pLivingEntity.xo > 0 != (pLivingEntity.getDeltaMovement().x() > 0)) { // Collision on X axis
+                newMotionX = currentMotion.x() * -bounceFactor;
+            }
+            if (Math.abs(pLivingEntity.getDeltaMovement().z()) > 0.05 && pLivingEntity.getZ() - pLivingEntity.zo > 0 != (pLivingEntity.getDeltaMovement().z() > 0)) { // Collision on Z axis
+                newMotionZ = currentMotion.z() * -bounceFactor;
             }
         }
+
+        // 2. Ground interaction (constant bop + scaled fall bounce)
+        if (pLivingEntity.onGround()) {
+            // Apply the small constant bop first
+            // This ensures a bop even if fallDistance is 0
+            double bopStrength = 0.3D; // Adjust this for desired 'bop' height
+            newMotionY = bopStrength;
+
+            // If fallen, add scaled bounce on top of the bop
+            if (pLivingEntity.fallDistance > 0.1F) {
+                // Additive bounce strength, capped.
+                // The base bop already provides some upward motion.
+                double fallBounceStrength = Math.min(pLivingEntity.fallDistance * 0.7D, 1.2D); // Cap additive bounce
+                newMotionY += fallBounceStrength; // Add to the existing bop
+                pLivingEntity.fallDistance = 0; // Reset fall distance
+            }
+        }
+
+        pLivingEntity.setDeltaMovement(newMotionX, newMotionY, newMotionZ);
 
         return super.applyEffectTick(pLivingEntity, pAmplifier);
     }
