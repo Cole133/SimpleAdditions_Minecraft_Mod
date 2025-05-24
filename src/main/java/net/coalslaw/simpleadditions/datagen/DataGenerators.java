@@ -11,7 +11,6 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.coalslaw.simpleadditions.datagen.ModLangProvider; // Ensure this import is present
 
 import java.util.Collections;
 import java.util.List;
