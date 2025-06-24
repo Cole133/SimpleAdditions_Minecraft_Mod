@@ -1,6 +1,6 @@
-#SimpleAdditions is a lightweight Minecraft mod built with Forge/Fabric that brings new ores, items, and mechanics to minecraft. 
+# SimpleAdditions is a lightweight Minecraft mod built with Forge/Fabric that brings new ores, items, and mechanics to minecraft. 
 
-##Features
+## Features
 - Data Generation: Auto-generated block, item, and loot table JSON via built-in data providers.
 - Custom Ores & Lootables
    Painite Ore: Used to craft mythical apples
